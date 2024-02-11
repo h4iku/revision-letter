@@ -1,4 +1,5 @@
 \usepackage{chngcntr}
+\usepackage{titlesec}
 
 % Environment for review comments
 \newcounter{revcomcounter}[section]
@@ -23,3 +24,6 @@
 
 % Reset comment counter in each section
 \counterwithin*{revcomcounter}{section}
+
+% Define section format without numbers
+\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{}
