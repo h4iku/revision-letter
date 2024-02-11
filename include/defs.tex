@@ -1,10 +1,8 @@
 \usepackage{chngcntr}
 
-% Counter for keeping track of comments
-\newcounter{revcomcounter}
-
-% Command for reading the review comment counter
-\renewcommand{\therevcomcounter}{\arabic{revcomcounter}}
+% Environment for review comments
+\newcounter{revcomcounter}[section]
+\renewcommand{\therevcomcounter}{\arabic{section}.\arabic{revcomcounter}}
 
 % Review comment environment
 \newenvironment{revcom}[1][]{%
