@@ -1,3 +1,4 @@
+\usepackage{chngcntr}
 
 % Counter for keeping track of comments
 \newcounter{revcomcounter}
@@ -7,17 +8,20 @@
 
 % Review comment environment
 \newenvironment{revcom}[1][]{%
-\refstepcounter{revcomcounter}%
-\ifx\\#1\\%
-\else
-\label{#1}%
-\fi
-\begin{trivlist}\item\textbf{Comment~\therevcomcounter: }\em%
-}%
-{\end{trivlist}}%
+    \refstepcounter{revcomcounter}%
+    \ifx\\#1\\%
+    \else
+        \label{#1}%
+    \fi
+    \begin{trivlist}\item\textbf{Comment~\therevcomcounter: }\em%
+        }%
+        {\end{trivlist}}%
 
 % Environment for responding to review comments
 \newenvironment{response}[1][]{%
-\begin{trivlist}\item\textbf{Response: }%
-}%
-{\end{trivlist}}%
+    \begin{trivlist}\item\textbf{Response: }%
+        }%
+        {\end{trivlist}}%
+
+% Reset comment counter in each section
+\counterwithin*{revcomcounter}{section}

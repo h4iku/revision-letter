@@ -1,8 +1,7 @@
-
 %%% Author: Peter W. V. Tran-Jørgensen
 %%% URL: https://github.com/peterwvj/revision-letter
 
-\documentclass[a4]{article}
+\documentclass[a4paper]{article}
 
 % Needed to create links for comments
 \usepackage{hyperref}
@@ -22,7 +21,25 @@
 \noindent Introduce the revision letter and acknowledge the reviewers'
 hard work.
 
-\section{Review 1}\label{sec:review1}
+\section{Reviewer 1}\label{sec:reviewer1}
+
+\begin{revcom}[com1:first-comment]
+  First comment to be addressed.
+\end{revcom}
+
+\begin{response}
+  Here is the response.
+\end{response}
+
+\begin{revcom}[com1:second-comment]
+  Second comment to be addressed.
+\end{revcom}
+
+\begin{response}
+  Response to comment~\ref{com1:first-comment}.
+\end{response}
+
+\section{Reviewer 2}\label{sec:reviewer2}
 
 \begin{revcom}
   First comment to be addressed.
@@ -32,15 +49,15 @@ hard work.
   Here is the response.
 \end{response}
 
-\begin{revcom}[com:second-comment]
+\begin{revcom}[com2:second-comment]
   Second comment to be addressed.
 \end{revcom}
 
 \begin{response}
-  Response to comment~\ref{com:second-comment}.
+  Response to comment~\ref{com2:second-comment}.
 \end{response}
 
 \bibliographystyle{splncs03}
 \bibliography{refs}
 
-\end{document} 
+\end{document}
